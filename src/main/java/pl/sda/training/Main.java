@@ -1,8 +1,12 @@
 package pl.sda.training;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.util.Arrays;
 import java.util.List;
 
+@SpringBootApplication
 public class Main {
 
     private static List<String> animals =
@@ -10,6 +14,10 @@ public class Main {
                     "pig", "rabbit", "hamster");
 
     public static void main(String[] args) {//metoda
+        SpringApplication.run(Main.class);
+    }
+
+    private static void basics() {
         System.out.println("hello world");
         System.out.println(animals);
         for (String text : animals) {
@@ -29,7 +37,7 @@ public class Main {
             }
             else {
                 animalsByComma = animalsByComma + ".";
-                            }
+            }
         }
         System.out.println(animalsByComma);
         int sum = Calculator.adding(3,8);
